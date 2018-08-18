@@ -64,7 +64,7 @@ void EvenOrOdd(int X, int Y)
 	std::cout << std::endl;
 }
 
-void EvenOrOdd(int X, int Y)
+void FizzBuzz(int X, int Y)
 {
 	std::cout << X;
 
