@@ -1,5 +1,8 @@
 #include<iostream>
 #include"Vector2.h"
+#include"Circle.h"
+#include"Piggy.h"
+#include"Student.h"
 
 int main() 
 {
