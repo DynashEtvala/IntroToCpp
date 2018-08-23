@@ -124,10 +124,9 @@ bool arrayUnique(int numbers[], int size)
 
 void reverseArray(int numbers[], int size)
 {
-	int hold = 0;
 	for (int i = 0; i < size / 2; i++)
 	{
-		hold = numbers[i];
+		int hold = numbers[i];
 		numbers[i] = numbers[size - 1 - i];
 		numbers[size - 1 - i] = hold;
 	}
@@ -135,14 +134,13 @@ void reverseArray(int numbers[], int size)
 
 void sortArrayUp(int numbers[], int size)
 {
-	int hold = 0;
 	for (int i = 0; i < size - 1; i++)
 	{
 		for (int j = i + 1; j < size; j++)
 		{
 			if (numbers[i] > numbers[j])
 			{
-				hold = numbers[i];
+				int hold = numbers[i];
 				numbers[i] = numbers[j];
 				numbers[j] = hold;
 			}
@@ -152,14 +150,13 @@ void sortArrayUp(int numbers[], int size)
 
 void sortArrayDown(int numbers[], int size)
 {
-	int hold = 0;
 	for (int i = 0; i < size - 1; i++)
 	{
 		for (int j = i + 1; j < size; j++)
 		{
 			if (numbers[i] < numbers[j])
 			{
-				hold = numbers[i];
+				int hold = numbers[i];
 				numbers[i] = numbers[j];
 				numbers[j] = hold;
 			}
@@ -169,12 +166,11 @@ void sortArrayDown(int numbers[], int size)
 
 void insertionSort(int numbers[], int size)
 {
-	int hold = 0;
 	for (int i = 0; i < size; i++)
 	{
 		for (int j = i; j > 0 && numbers[j - 1] > numbers[j]; j--)
 		{
-			hold = numbers[j - 1];
+			int hold = numbers[j - 1];
 			numbers[j - 1] = numbers[j];
 			numbers[j] = hold;
 		}
