@@ -31,11 +31,13 @@ int main()
 		case 'p':
 		case 'P':
 			std::cout << "Playing game!" << std::endl;
+			//clear board
 			ResetBoard();
 			play = true;
 			break;
 		case 'q':
 		case 'Q':
+			//exit game
 			std::cout << "Quitting..." << std::endl;
 			quit = true;
 			break;
@@ -92,7 +94,6 @@ int main()
 					//win
 					std::cout << "Player " << playerTurn << " wins!" << std::endl;
 					DisplayBoard();
-					system("pause");
 					play = false;
 				}
 				else
@@ -103,7 +104,6 @@ int main()
 					{
 						std::cout << "It's a tie!" << std::endl;
 						DisplayBoard();
-						system("pause");
 						play = false;
 					}
 					//next turn
