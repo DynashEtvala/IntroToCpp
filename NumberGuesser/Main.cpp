@@ -1,32 +1,29 @@
 #include<iostream>
+#include"Helpers.h"
 
 int main()
 {
 	bool quit = false;
-
+	int guessmax = 100;
+	int guess = -1;
 	while (!quit)
 	{
-		int myNumber = rand() % 1000 + 1;
-		bool play = true;
-		while (play)
+		std::cout << "Think of a number between 1 and " << guessmax << ". Press enter when you have." << std::endl;
+		std::cout << std::endl;
+		std::cin.get();
+
+		guess = GuessNumber(1, guessmax);
+
+		std::cout << "Iguessed your number! It's " << guess << "!" << std::endl;
+
+		char again = 0;
+		std::cout << "Play again? [Y]es/[N]o" << std::endl;
+		std::cout << std::endl;
+		std::cin >> again;
+		std::cout << std::endl;
+		if (again == 'n' || again == 'N')
 		{
-			int guess = 0;
-			std::cout << "I'm thinking of a number between 1 and 1000..." << std::endl;
-			std::cout << std::endl;
-			std::cin >> guess;
-			if (guess < myNumber)
-			{
-				std::cout << "That's too low!" << std::endl;
-			}
-			else if (guess > myNumber)
-			{
-				std::cout << "That's too high!" << std::endl;
-			}
-			else
-			{
-				std::cout << "That's my number! Let's play again!" << std::endl;
-				play = false;
-			}
+			quit = true;
 		}
 	}
 
