@@ -2,6 +2,9 @@
 #include <iostream>
 using namespace std;
 
+//constructors
+
+//default constructor
 Fighter::Fighter()
 {
 	health = 0;
@@ -11,6 +14,7 @@ Fighter::Fighter()
 	atkName = "N/A";
 }
 
+//constructor with all variables
 Fighter::Fighter(int Health, int MinAtk, int MaxAtk, string Name, string AtkName)
 {
 	health = Health;
@@ -20,17 +24,9 @@ Fighter::Fighter(int Health, int MinAtk, int MaxAtk, string Name, string AtkName
 	atkName = AtkName;
 }
 
-void Fighter::Attack(Fighter& target)
-{
-	int damage = (rand() % (maxAtk - minAtk)) + minAtk;
-	target.Damage(damage);
-	cout << name << " attacks " << target.GetName() << " with " << atkName << " and inflicts " << damage << " damage!" << endl;
-}
 
-void Fighter::Damage(int dam)
-{
-	health -= dam;
-}
+
+//getters
 
 int Fighter::GetHealth()
 {
@@ -46,4 +42,26 @@ string Fighter::GetAtkName()
 {
 	return atkName;
 }
+
+
+
+//functions
+
+//fighter will attack the target
+void Fighter::Attack(Fighter& target)
+{
+	//calculate random damage value
+	int damage = (rand() % (maxAtk - minAtk)) + minAtk;
+	//have target take damage
+	target.Damage(damage);
+	//display what happened
+	cout << name << " attacks " << target.GetName() << " with " << atkName << " and inflicts " << damage << " damage!" << endl;
+}
+
+//fighter takes damage
+void Fighter::Damage(int dam)
+{
+	health -= dam;
+}
+
 
