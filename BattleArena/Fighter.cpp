@@ -1,6 +1,5 @@
 #include "Fighter.h"
 #include <iostream>
-using namespace std;
 
 //constructors
 

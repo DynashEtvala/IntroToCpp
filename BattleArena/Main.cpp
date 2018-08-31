@@ -1,6 +1,5 @@
 #include<iostream>
 #include"Fighter.h"
-using namespace std;
 
 //check if all fighters on a team are dead
 bool CheckLoss(Fighter team[], int size)
@@ -40,6 +39,9 @@ int main()
 	team2[1] = Fighter(25, 1, 5, "Bucky Barnes", "Punch");
 	team2[2] = Fighter(20, 3, 7, "Hawk Eye", "Arrow");
 	bool quit = false;
+	//start
+	cout << "Battle Arena\n\nPRESS ENTER TO START\n" << endl;
+	cin.get();
 	//main loop
 	while (!quit)
 	{
@@ -80,6 +82,9 @@ int main()
 				}
 			}
 		}
+		//pause before next round
+		cout << "Press enter to end round" << endl;
+		cin.get();
 		//check if team1 are all dead
 		if (CheckLoss(team1, size))
 		{
