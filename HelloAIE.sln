@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8-PointersToMemory", "8-Poi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9-DynamicMemoryAllocation", "9-DynamicMemoryAllocation\9-DynamicMemoryAllocation.vcxproj", "{1A21EB63-B40D-4521-B587-8808F624F59A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10-Classes", "10-Classes\10-Classes.vcxproj", "{2ECC2518-413D-460C-877B-737E588327CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{1A21EB63-B40D-4521-B587-8808F624F59A}.Release|x64.Build.0 = Release|x64
 		{1A21EB63-B40D-4521-B587-8808F624F59A}.Release|x86.ActiveCfg = Release|Win32
 		{1A21EB63-B40D-4521-B587-8808F624F59A}.Release|x86.Build.0 = Release|Win32
+		{2ECC2518-413D-460C-877B-737E588327CB}.Debug|x64.ActiveCfg = Debug|x64
+		{2ECC2518-413D-460C-877B-737E588327CB}.Debug|x64.Build.0 = Debug|x64
+		{2ECC2518-413D-460C-877B-737E588327CB}.Debug|x86.ActiveCfg = Debug|Win32
+		{2ECC2518-413D-460C-877B-737E588327CB}.Debug|x86.Build.0 = Debug|Win32
+		{2ECC2518-413D-460C-877B-737E588327CB}.Release|x64.ActiveCfg = Release|x64
+		{2ECC2518-413D-460C-877B-737E588327CB}.Release|x64.Build.0 = Release|x64
+		{2ECC2518-413D-460C-877B-737E588327CB}.Release|x86.ActiveCfg = Release|Win32
+		{2ECC2518-413D-460C-877B-737E588327CB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

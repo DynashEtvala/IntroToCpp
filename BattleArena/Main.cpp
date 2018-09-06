@@ -32,7 +32,7 @@ int main()
 	int size = 3;
 	Fighter team1[3];
 	team1[0] = Fighter(25, 1, 5, "Iron Man", "Lazer");
-	team1[1] = Fighter(20, 3, 7, "War MAchine", "Machine Gun");
+	team1[1] = Fighter(20, 3, 7, "War Machine", "Machine Gun");
 	team1[2] = Fighter(40, 1, 2, "Black Panther", "Claw");
 	Fighter team2[3];
 	team2[0] = Fighter(40, 1, 2, "Captain America", "Shield");
