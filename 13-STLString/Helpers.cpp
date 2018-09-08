@@ -72,8 +72,14 @@ void ToLower(char* base)
 
 char TakeInput()
 {
-	char result = cin.get();
-	ToLower(&result);
+	char result;
+	cin.get(result);
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	if (result >= 65 && result <= 90)
+	{
+		result += 32;
+	}
+	system("CLS");
 	return result;
 }
 
@@ -83,8 +89,8 @@ void Hangman()
 	bool game = false;
 	int strikesMax = 5;
 	int strikes = 0;
-	string goal = 0;
-	string guess = 0;
+	string goal;
+	string guess;
 	char input = 0;
 	while (!quit)
 	{
@@ -100,7 +106,7 @@ void Hangman()
 				cout << "Select difficulty:" << endl << "[E]asy/[M]edium/[H]ard" << endl;
 				input = TakeInput();
 				goal = HangList(input);
-				if (goal.compare(0))
+				if (goal == "")
 				{
 					cout << "input invalid" << endl;
 				}
@@ -111,6 +117,7 @@ void Hangman()
 					{
 						guess.append("_");
 					}
+					strikes = 0;
 					oktogo = true;
 				}
 			}
@@ -148,9 +155,9 @@ void Hangman()
 				cout << "You lose!" << endl << "Returning to menu...";
 				game = false;
 			}
-			else if (guess.compare(goal))
+			else if (guess == goal)
 			{
-				cout << "You win!" << endl << "Returning to menu...";
+				cout << "You win!" << endl << "Returning to menu..." << endl;
 				game = false;
 			}
 		}
@@ -172,7 +179,7 @@ string HangList(char difficulty)
 	case 'h':
 		return hard[r];
 	default:
-		return 0;
+		return "";
 	}
 }
 

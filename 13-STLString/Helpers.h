@@ -2,6 +2,7 @@
 #include<iostream>
 #include<string>
 #include<cstring>
+#include<time.h>
 using namespace std;
 
 void EveryOther(string);
