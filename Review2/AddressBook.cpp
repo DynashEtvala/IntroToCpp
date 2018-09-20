@@ -42,7 +42,6 @@ void AddressBook::SortContacts(int s, int e, int layer)
 	}
 	for (int i = 'a'; i <= 'z'; i++)
 	{
-		//if (DoLonger(s, e, layer + 1, i))
 		{
 			int first = -1;
 			int last = -1;
@@ -106,7 +105,6 @@ void AddressBook::SortContacts()
 	}
 	for (int i = 'a'; i <= 'z'; i++)
 	{
-		//if (DoLonger(0, totalContacts - 1, 1, i))
 		{
 			int first = -1;
 			int last = -1;
